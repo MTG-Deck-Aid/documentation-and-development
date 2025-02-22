@@ -1,12 +1,22 @@
 version: "3.8"
 
 services:
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    restart: always
+    ports:
+      - "9000:9000"
+      - "8000:8000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
   frontend:
     build: ../../frontend
     ports:
       - "3000:3000"
     volumes: 
-      - ../../frontend:/TODO
+      - ../../frontend:/app_src
     environment:
       - REST_API_URL=http://localhost:5000
     
@@ -15,7 +25,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - "../../backend:/TODO"
+      - "../../backend:/app_src"
     environment:
       - DATABASE_URL=postgres://user:password@db:5450/mystictuner
 
@@ -27,3 +37,6 @@ services:
       - POSTGRES_DB=mystictuner
     ports:
       - "5450:5432"
+
+volumes:
+  portainer_data:
