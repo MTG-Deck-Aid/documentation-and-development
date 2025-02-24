@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "3ed222bc-a711-4685-8ff0-967d1dbab7f4",
+		"name": "MysticTunerAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42591423"
+	},
+	"item": [
+		{
+			"name": "decks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "SEE EXAMPLE",
+					"host": [
+						"SEE EXAMPLE"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "decks?token=TODO",
+							"host": [
+								"decks"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "TODO"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    data: \"[Deck1, Deck2, Deck3]\"\r\n    \"status\": \"success\",\r\n    \"code\": 200\r\n}"
+				}
+			]
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "authenticate",
+					"host": [
+						"authenticate"
+					]
+				},
+				"description": "test"
+			},
+			"response": []
+		},
+		{
+			"name": "search-card",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "SEE EXAMPLE",
+					"host": [
+						"SEE EXAMPLE"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "search-card?filter=commander",
+							"host": [
+								"search-card"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "commander"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"data\": [Card1, Card2, Card3, ...],\r\n    \"status\": \"success\",\r\n    \"code\": 200\r\n}"
+				}
+			]
+		},
+		{
+			"name": "suggestion",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "suggestion?deck-list=[Card1,Card2,Card3...]",
+							"host": [
+								"suggestion"
+							],
+							"query": [
+								{
+									"key": "deck-list",
+									"value": "[Card1,Card2,Card3...]"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"data\": [{\r\n        \"card_to_add\": Card,\r\n        \"card_to_remove\": Card,\r\n        \"suggestion_reason\": \"This card is great - ChatGPT\"\r\n    },\r\n    {\r\n        \"card_to_add\": Card,\r\n        \"card_to_remove\": Card,\r\n        \"suggestion_reason\": \"This card is also great - ChatGPT\"\r\n    }],\r\n    \"status\": \"success\",\r\n    \"code\": 200\r\n}"
+				}
+			]
+		},
+		{
+			"name": "deck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "SEE EXAMPLE",
+					"host": [
+						"SEE EXAMPLE"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "save-deck?deck-list=[Card1,Card2,Card3]&name=MyCommanderDeck1",
+							"host": [
+								"save-deck"
+							],
+							"query": [
+								{
+									"key": "deck-list",
+									"value": "[Card1,Card2,Card3]"
+								},
+								{
+									"key": "name",
+									"value": "MyCommanderDeck1"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"data\":None,\r\n    \"status\": \"success\",\r\n    \"code\": 200\r\n}"
+				}
+			]
+		},
+		{
+			"name": "deck",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "SEE EXAMPLE",
+					"host": [
+						"SEE EXAMPLE"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "delete-deck?deck-id=12",
+							"host": [
+								"delete-deck"
+							],
+							"query": [
+								{
+									"key": "deck-id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"data\":None,\r\n    \"status\": \"success\",\r\n    \"code\": 200\r\n}"
+				}
+			]
+		},
+		{
+			"name": "deck",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "deck?deck-list=[Card1.Card2.Card3]&id=12",
+							"host": [
+								"deck"
+							],
+							"query": [
+								{
+									"key": "deck-list",
+									"value": "[Card1.Card2.Card3]"
+								},
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
