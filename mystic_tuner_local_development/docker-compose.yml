@@ -10,3 +10,15 @@ services:
     env_file:
       - ../../backend/Mystic_Tuner_Backend/.env
     command: python manage.py runserver 0.0.0.0:5000
+
+  frontend:
+    build:
+      context: ../../frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../../frontend/Mystic_Tuner_Frontend:/app_src
+    env_file:
+      - ../../frontend/Mystic_Tuner_Frontend/.env
+    command: npm run dev
