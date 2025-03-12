@@ -1,11 +1,6 @@
-# SENG 401 PROJECT
+# SENG 401 PROJECT Requirements Document
 ### Members
-- Sachin Seizer
-- Brendan SMILEY
-- Luca Rios
-- Cody Casselman
-- Rohan Lange
-- Wade Banman
+Sachin Seizer, Brendan SMILEY, Luca Rios, Cody Casselman, Rohan Lange and Wade Banman
 
 # Functional Requirments
 
