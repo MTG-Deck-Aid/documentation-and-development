@@ -9,11 +9,19 @@ Sachin Seizer, Brendan SMILEY, Luca Rios, Cody Casselman, Rohan Lange and Wade B
 - create/read/update/delete deck and card data to database
 - maintain a single point of access to the database
 - Authenticate users
+- Keep private user data secure
 - Use a generative AI to analyse the user inputted decks
 - Communicate with ScryFall API to get magic card information
+- Website must be able to run on both mobile devices and desktops
+- users can login
+- users can use the application as a guest 
 
 # Non Functional Requirements
-- 
+- Requests to Scryfall API are structured so that the request is processed in a reasonable amount of time.
+- Requests to Gemini API are structure so that the response is easy for user to understand
+- UI of frontend webpage is made to be intuitive for the user to navigate
+- Database queries are structured to be completed in a reasonable amount of time
+- User authentication tokens are verified on both ends to ensure security
 
 # User Stories
 ## Guest Users
