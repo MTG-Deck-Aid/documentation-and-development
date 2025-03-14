@@ -1,4 +1,4 @@
 # Procfile for local development
 # Adds each repo and their respective .env into dynos
-web: cd ../../frontend/mystic_tuner_frontend && npm run dev
+web: cd ../../frontend && npm run dev
 worker: cd ../../backend/venv/Scripts && activate && cd ../../Mystic_Tuner_Backend && python manage.py runserver 0.0.0.0:5000
