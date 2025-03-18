@@ -41,10 +41,12 @@ We also have other examples of classes that have only responsibility, such as th
 
 O - Open-Close Principle
 
-Our CardSuggestor class does a lot of 
+Our CardSuggestor class follows the Open-Close Principle.  By using the Strategy pattern, whenever a new LLM needs to be used, we can simply 
+create a new strategy instead of having to modify the existing methods.
 
 L - Liskov Subtitution
 
 I - Interface Seggregation
 
 D - Dependency Inversion
+
