@@ -10,7 +10,7 @@ Sachin Seizer, Brendan SMILEY, Luca Rios, Cody Casselman, Rohan Lange and Wade B
 - maintain a single point of access to the database
 - Authenticate users
 - Keep private user data secure
-- Use a generative AI to analyse the user inputted decks
+- Use a generative AI to analyse the user inputted decks and get deck tuning suggestions
 - Communicate with ScryFall API to get magic card information
 - Website must be able to run on both mobile devices and desktops
 - users can login
@@ -18,7 +18,7 @@ Sachin Seizer, Brendan SMILEY, Luca Rios, Cody Casselman, Rohan Lange and Wade B
 
 # Non Functional Requirements
 - Requests to Scryfall API are structured so that the request is processed in a reasonable amount of time.
-- Requests to Gemini API are structure so that the response is easy for user to understand
+- Requests to Gemini API are structure so that the response is easy for the user to understand
 - UI of frontend webpage is made to be intuitive for the user to navigate
 - Database queries are structured to be completed in a reasonable amount of time
 - User authentication tokens are verified on both ends to ensure security
@@ -26,27 +26,22 @@ Sachin Seizer, Brendan SMILEY, Luca Rios, Cody Casselman, Rohan Lange and Wade B
 # User Stories
 ## Guest Users
 
-As a guest user I want to be able to create up to 3 decks of a minimum of 60 cards, in a single session, by searching card names in order to have them assessed and consider which changes I'd like to make.
+As a guest user I want to be able to paste in my deck and get suggestions so that I can quickly figure out what changes I should make to my deck
 
-As a guest user I want the ability to import my decks from moxfield to simplify the process of having my deck tuned.
-
-As a guest user I'd like to receive feed back on a deck in order to identify what cards can be changed in order to make improvements to my decks winrate.
-
-As a guest user I'd like to be able to provide a specific card and receive input on whether or not it should be added to my deck.
-
-As a guest user I'd like to put basic restrictions on modification suggeestions such as maximum price of cards suggested, colour of cards suggested, type of cards suggested i.e enchantment, instant etc. and carsd available to a specific playing format.
-
-As a guest user I'd like to receive general feedback on the strengths and weaknesses of my deck along side additions / alterartions that can be made.
-
-As a guest user I wish to be able to review decks posted to the community so that i can take insporation or build them myself and give them a try. ( Need Opinions )
+As a guest user I want to be free to navigate the website without have to login so that I can still easily make use of the website's features.
 
 ## Registered Users
 
-As a Registered user I want to be able to create up to 10 decks of a minimum of 60 cards, that are stored across all current and future instances of the application, by searching card names in order to have them assessed and consider which changes I'd like to make.
+As a registered user I want to be able to save my inputted decks so that I can review them again later.
 
-As a Registered user, I want to receive notifications when new cards are released that might improve my deck so that I can keep it updated. ( Need opinions ).
+As a registered user I want to be able to have multiple decks saved at once so that I have flexibility on which deck I would like to work on on a given date.
 
-As a registered user, I want to share my deck with the community to receive feedback on other potential changes and additions. ( Need Opinion ).
+As a registered user I want to be able to easily sign in and out of my account so that I can feel secure that my account won't be accessed by others.
 
-As a registered user I want to be able to view decks posted by the community and leave comments relating to possible improvements or alterations that could be made.
+## General Users
 
+As a user I want to be able to get relevant suggestions on any of my decks so that I can improve my decks.
+
+As a user I want to be able to be able to chose which suggestions to apply to my deck and have it done automaticlaly to make tuning my deck much easier.
+
+As a user I want the ability to import my decks from any of the common deck building websites, such as Moxfield, to simplify the process of having my deck tuned.
