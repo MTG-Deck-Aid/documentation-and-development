@@ -25,7 +25,14 @@ new, better LLMs may be released or the exisiting LLM we're using (currently the
 With the strategy pattern, we can easily create a new strategy using a different AI without have to change any existing code, adhering
 to the open-close principle.
 
-??? - Decorator
+API routes - Decorator
+
+All of our API routes make use of the decorator pattern in their request/response packages.  We wrap the the body of data with a header and other information.  By doing this, we're able to make flexibly structured requests between the frontend and backend.
+
+frontend - Observer
+
+In our frontend, we commonly make use of a javascript method called useEffect.  This method makes use of the Observer pattern, reacting to whenever the page loads or if any of the variables it's assigned to observe change.  It allows us to make a dynamic and responsive website that can easily respond to any user input.
+
 
 
 # Adherance to SOLID Principles
@@ -35,18 +42,23 @@ In our project we made lots of effort to adhere our programming to the SOLID pri
 S - Single Responsibility
 
 The database connection classes are a good example of adherance to single responsibility.  In the Database_Connector folder, there are three classes: 
+
 DatabaseConnector, CardQueries, DeckQueries.  Each of these classes is responsible for a single job.  DatabaseConnector sends queries to the database, CardQueries builds queries for the Card table and Deckqueries builds queries for the Deck table.  
 
-We also have other examples of classes that have only responsibility, such as the ScryFallEngine class that focuses solely on communication information with the ScryFall API.
+We also have other examples of classes that have only one responsibility, such as the ScryFallEngine class that focuses solely on communication information with the ScryFall API.
 
 O - Open-Close Principle
 
-Our CardSuggestor class follows the Open-Close Principle.  By using the Strategy pattern, whenever a new LLM needs to be used, we can simply 
-create a new strategy instead of having to modify the existing methods.
+Our CardSuggestor class follows the Open-Close Principle.  By using the Strategy pattern, whenever a new LLM needs to be used, we can simply create a new strategy instead of having to modify the existing methods.
 
 L - Liskov Subtitution
 
+In using python adn due to the nature of our project, there weren't any instances of which this principle was applicable to our project.
+
 I - Interface Seggregation
+
+In using python and due to the nature of our project, there aren't many instances of interfaces being used, but when they they're used accuractly and specifically.  The one example we have is the DeckListTuner abstract class, that is specifically inherited by AI connector classes.
 
 D - Dependency Inversion
 
+Almost all of our objects are constructed to function independently of one another.  One example is the SuggestionController class, where it references an abstract OperationStrategy class rather than a concrete class.

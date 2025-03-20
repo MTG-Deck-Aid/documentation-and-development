@@ -118,3 +118,14 @@ Error cases:
 - TC-CS04
 
 ## Authentication system
+
+## Frontend Navigation
+
+We made use of selenium to perform various navigation and feature tests of the frontend.  The main aspects tested were:
+1. adding a deck
+2. editing a deck
+3. getting suggestions
+4. applying suggestions
+
+for each, these are the tests the cover each one:
+
