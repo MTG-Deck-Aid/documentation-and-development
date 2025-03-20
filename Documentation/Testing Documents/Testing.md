@@ -122,10 +122,17 @@ Error cases:
 ## Frontend Navigation
 
 We made use of selenium to perform various navigation and feature tests of the frontend.  The main aspects tested were:
-1. adding a deck
-2. editing a deck
-3. getting suggestions
-4. applying suggestions
+1. basic navigation
+2. login
+3. editing a deck
+4. getting suggestions
+5. applying suggestions
+6. Mobile navigation
 
 for each, these are the tests the cover each one:
-
+1. TC-FR01-02
+2. TC-FR03
+3. TC-FR04-06, TC-FR10-12, 14
+4. TC-FR07, 13
+5. TC-FR08
+6. TC-FR09
