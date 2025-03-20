@@ -1,13 +1,9 @@
 # documentation
-Generic Documentation for the Application
-## Software Architecture - UML Digrams
-### Class Diagram
-![ClassDiagram](./UML_Diagrams/ClassDiagram.jpg)
-### Deployment Diagram
-![DeploymentDiagram](./UML_Diagrams/DeploymentDiagram.jpg)
 
-### Component Diagram
-![ComponentDiagram](./UML_Diagrams/LogicalandPhysicalComponentDiagram.jpg)
+Documentation for the MysticTuner application.  Follow the following links to view each of the required report documents for the Project
 
-### Sequence Diagram
-![SequenceDiagram](./UML_Diagrams/UserLoginSequenceDiagram.jpg)
+### [DesignDocument](./Documentation/Design%20Documents/Design.md)
+
+### [RequirementsDocument](./Documentation/Requirements%20Documents/requirements.md)
+
+### [TestDocument](./Documentation/Testing%20Documents/Testing.md)
