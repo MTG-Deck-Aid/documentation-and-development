@@ -1,10 +1,13 @@
 # SENG 401 PROJECT GROUP 7 Testing Document
+
 ### Members
+
 Sachin Seizer, Brendan SMILEY, Luca Rios, Cody Casselman, Rohan Lange and Wade Banman
 
 # Introduction
 
 For our application, the following systems are considered to be critical:
+
 - [Database Connection](#Database-connection) (including create/read/update/delete)
 - [Large Language Model querying](#LLM-Connector)
 - [ScryFall API querying](#scryfall-connector)
@@ -22,6 +25,7 @@ While not as critical, a test suite for [frontend navigation](#frontend-navigati
 <img src = "media\connector-tests.jpg" width = "720">
 
 The databases connector is comprised of three classes:
+
 - DatabaseConnector - the class responsible for the actual connection to the database and execution of queries
 - CardQueries - class responsible for formatting queries for the card table
 - DeckQueries - class responsible for formatting queries for the deck table
@@ -51,32 +55,35 @@ DeckQueries:
 
 ### Test Validation
 
-Force each class, weak Equivalence class testing (ECT) and Boundary Value Testing (BVT) was used to develop test cases.  This meant:
+Force each class, weak Equivalence class testing (ECT) and Boundary Value Testing (BVT) was used to develop test cases. This meant:
 
 - Test with valid inputs
 - Test with inputs right at the boundary of validity
 - Test with error inputs
 
-
 #### DatabaseConnector:
 
 The main aspects to be tested:
+
 1. Being able to connect to the database
 2. Allowing only one instance of the class (to ensure single point of connection to database)
 
 Test coverage:
+
 1. TC-DC01, TC-DC03
 2. TC-DC02
 
 #### CardQueries:
 
 The main aspects to be tested:
+
 1. Insertion of rows
 2. Reading of rows
 3. Update of rows
 4. deletion of rows
 
 Test coverage:
+
 1. TC-CQ01 - TC-CQ08
 2. TC-CQ09, TC-CQ10
 3. TC-CQ11 - TC-CQ16
@@ -85,12 +92,14 @@ Test coverage:
 #### DeckQueries
 
 The main aspects to be tested:
+
 1. Insertion of rows
 2. Reading of rows
 3. Update of rows
 4. deletion of rows
 
 Test coverage:
+
 1. TC-DQ01 - TC-DQ05
 2. TC-DQ06 - TC-DQ09
 3. TC-DQ10 - TC-DQ13
@@ -228,7 +237,9 @@ Along with confirming that all routes are functioning as expected these test als
 
 ### Test Results
 
-There are two main aspects of the AI connector to test: Getting suggestions on cards to remove, and getting suggestions on cards to add.  
+![Test Results for LLM Connector](./media/llm-tests.png)
+
+There are two main aspects of the AI connector to test: Getting suggestions on cards to remove, and getting suggestions on cards to add.
 
 ### Test Datasets
 
@@ -272,18 +283,20 @@ The following dataset is a sample of a list of cards that would be passed to the
     }
     }
 
-
 ### Test Validation
 
+Test validation for this method requires quantitative and qualitative analysis. For the quantitative analysis, we need to validate that the AI returns the information in the required format. An example can be seen [here](./media/prompt.txt). The following test cases cover either the common cases or error cases expected from the LLM.
 Test validation for this method requires quantitative and qualitative analysis.  For the quantitative analysis, we need to validate that the AI returns the information in the required format.  An example can be seen [here](./media/prompt.txt).  The following test cases cover either the common cases or error cases expected from the LLM.
 
 Common cases:
+
 - TC-CS01, TC-CS02, TC-CS04, TC-CS05, TC-CS06
 
 Error cases:
+
 - TC-CS03
 
-In terms of qualitative analysis, in regard to whether the quality of the suggestion is accurate, needs to be done manually.  After testing with various real life decks and comparing the suggestions of the LLM with reputable sources such as EDHRec and Moxfield, we can assert that the AI is giving accurate suggestions.  Validating the quality of the results would be an ongoing process, as new cards are released, shifting the meta and changing which cards would consider valid suggestions by the LLM.
+In terms of qualitative analysis, in regard to whether the quality of the suggestion is accurate, needs to be done manually. After testing with various real life decks and comparing the suggestions of the LLM with reputable sources such as EDHRec and Moxfield, we can assert that the AI is giving accurate suggestions. Validating the quality of the results would be an ongoing process, as new cards are released, shifting the meta and changing which cards would consider valid suggestions by the LLM.
 
 ## Scryfall Connector
 
@@ -301,30 +314,32 @@ test datasets would include the full/partial names of magic the gathering cards.
 
 ### Test Validation
 
-The ScryFallEngine class has one function to test.  Can it send and receive data from the ScryFall API.  Tests TC-SE01 and TC-SE02 
-test the common and boundary cases for the class.  We can validate the correctness of the reponse by whether the response of the API was what was intended be received.  In the example of an input of "Demonic" this is an incomplete card name for the full card name "Demonic Tutor".  If the API returns "Demonic Tutor" the test passes.
+The ScryFallEngine class has one function to test. Can it send and receive data from the ScryFall API. Tests TC-SE01 and TC-SE02
+test the common and boundary cases for the class. We can validate the correctness of the reponse by whether the response of the API was what was intended be received. In the example of an input of "Demonic" this is an incomplete card name for the full card name "Demonic Tutor". If the API returns "Demonic Tutor" the test passes.
+
 
 
 ## Frontend Navigation
 
-For frontend navigation we made use of exploratory testing.  Below is our exploratory testing charter
+For frontend navigation we made use of exploratory testing. Below is our exploratory testing charter
 
-| Test case                        | Explore                                          | using                                               | to                                                                   |   |
-|----------------------------------|--------------------------------------------------|-----------------------------------------------------|----------------------------------------------------------------------|---|
-| login                            | user login                                       | the auth0 login page                                | see if users can create/login to their accounts                      |   |
-| Get suggestions                  | user deck suggestions                            | the create deck page/get suggestions method         | see if users can input their deck to get suggestions                 |   |
-| accepted deck formats            | text recognitition for various deck list formats | the three different export methods used by moxfield | see if our website supports the most common deck formats             |   |
-| load existing deck               | fetching a saved deck from database              | a test account with a saved deck within             | see if registered users can access their saved decks                 |   |
-| input erroneous deck information | error catching                                   | the deck creation page                              | see if the website will catch user errors when inputting their decks |   |
-| commander search autofill        | autofill commander name                          | the find you commander feature                      | see if the website will autofill partially inputted commander names  |   |
-| mobile app support               | using the app on your phone                      | my phone                                            | see if the website works on the phone                                |   |
+| Test case                        | Explore                                          | using                                               | to                                                                   |     |
+| -------------------------------- | ------------------------------------------------ | --------------------------------------------------- | -------------------------------------------------------------------- | --- |
+| login                            | user login                                       | the auth0 login page                                | see if users can create/login to their accounts                      |     |
+| Get suggestions                  | user deck suggestions                            | the create deck page/get suggestions method         | see if users can input their deck to get suggestions                 |     |
+| accepted deck formats            | text recognitition for various deck list formats | the three different export methods used by moxfield | see if our website supports the most common deck formats             |     |
+| load existing deck               | fetching a saved deck from database              | a test account with a saved deck within             | see if registered users can access their saved decks                 |     |
+| input erroneous deck information | error catching                                   | the deck creation page                              | see if the website will catch user errors when inputting their decks |     |
+| commander search autofill        | autofill commander name                          | the find you commander feature                      | see if the website will autofill partially inputted commander names  |     |
+| mobile app support               | using the app on your phone                      | my phone                                            | see if the website works on the phone                                |     |
+
 ### Test Results
 
 Our exploratory testing managed to successfully complete all of the tasks listed in the above table
 
 ### Test Datasets
 
-For testing the website, a deck from Moxfield was used as sample data, as this is the mostly likely source where users using our website will get their data from.  The deck used for testing can found [here](https://moxfield.com/decks/SE4kNjfWsUy3bgm61p3-vQ).  The sideboard data is ignored as that is not relevant to the testing.
+For testing the website, a deck from Moxfield was used as sample data, as this is the mostly likely source where users using our website will get their data from. The deck used for testing can found [here](https://moxfield.com/decks/SE4kNjfWsUy3bgm61p3-vQ). The sideboard data is ignored as that is not relevant to the testing.
 
 ### Test Validation
 
@@ -336,4 +351,4 @@ For our website, these are the main features that needed to be tested
 4. getting suggestions
 5. Mobile navigation
 
-Our exploratory testing charter covers all of those aspects.  Since the test was done manually as a user, we can be confident that our website will work as expected with real end users as we performed all the actions they would perform.
+Our exploratory testing charter covers all of those aspects. Since the test was done manually as a user, we can be confident that our website will work as expected with real end users as we performed all the actions they would perform.
