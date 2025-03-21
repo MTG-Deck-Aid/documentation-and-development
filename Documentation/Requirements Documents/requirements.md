@@ -70,10 +70,10 @@ As a user I want the ability to import my decks from any of the common deck buil
 |   | REQ - 18       | The backend must be able to update from deck table                                                   | TC-DQ10-13          | Completed |
 |   | REQ - 19       | The backend must be able to connect to scryfall API                                                  | TC-SE01-02          | Completed |
 |   | REQ - 20       | The backend must be able to find a partially inputted card name using scryfall API                   | TC-SE01             | Completed |
-|   | REQ - 21       | The backend must be able to validate a user inputted deck list in less than 5 seconds                |                     | Completed |
+|   | REQ - 21       | The backend must be able to validate a user inputted deck list in less than 5 seconds                | TC-AP15             | Completed |
 |   | REQ - 22       | The backend must be able to connect to the Gemini API                                                | TC-CS01-06          | Completed |
 |   | REQ - 23       | The backend must be able to get 1-5 suggestions on cards to add to the deck from the Gemini API      | TC-CS02, TC-CS05    | Completed |
 |   | REQ - 24       | The backend must be able to get 1-5 suggestions on cards to remove from the deck from the Gemini API | TC-CS04             | Completed |
-|   | REQ - 25       | The User must be able to search for their commander and get real time autofill suggestions           |                     | Completed |
+|   | REQ - 25       | The User must be able to search for their commander and get real time autofill suggestions           | TC-AP07, TC-AP08    | Completed |
 |   | REQ - 26       | Frontend must be able to request and retrieve an authentication token from auth0                     |                     | Completed |
-|   | REQ - 27       | The backend must be able to validate authentication tokens sent back by the frontend                 |                     | Completed |
+|   | REQ - 27       | The backend must be able to validate authentication tokens sent back by the frontend                 | TC-AP09-14          | Completed |

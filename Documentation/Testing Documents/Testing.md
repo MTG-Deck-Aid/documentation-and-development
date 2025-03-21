@@ -177,9 +177,11 @@ Verify Cards:
     Aspects to be tested:
         1 - test that verify cards works when passed a valid list of names
         2 - test that verify cards returns correct response when there are invalid cards
+        3 - Ensure that a deck can be validated in less than 5 seconds
     Test Coverage:
         1 - TC-AP01
         2 - TC-AP02
+        3 - TC-AP15
 Get Image Links:
     Aspects to be tested:
         1 - Ensure that route successfully returns image links for requested card
