@@ -119,7 +119,7 @@ Test coverage:
 
 ### Test Results
 
-![Test Results for LLM Connector](image.png)
+![Test Results for LLM Connector](./media/llm-tests.png)
 
 There are two main aspects of the AI connector to test: Getting suggestions on cards to remove, and getting suggestions on cards to add.
 
