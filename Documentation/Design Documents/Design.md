@@ -1,4 +1,4 @@
-# SENG 401 PROJECT Design Document
+# SENG 401 PROJECT GROUP 7 Design Document
 ### Members
 Sachin Seizer, Brendan SMILEY, Luca Rios, Cody Casselman, Rohan Lange and Wade Banman
 
