@@ -1,4 +1,4 @@
-# SENG 401 PROJECT Testing Document
+# SENG 401 PROJECT GROUP 7 Testing Document
 ### Members
 Sachin Seizer, Brendan SMILEY, Luca Rios, Cody Casselman, Rohan Lange and Wade Banman
 
@@ -13,7 +13,7 @@ For our application, the following systems are considered to be critical:
 
 While not as critical, a test suite for [frontend navigation](#frontend-navigation) was done as well to ensure user experience was smooth while using our application.
 
-# Test Results
+# Tests
 
 ## Database Connection
 
@@ -98,7 +98,7 @@ Test coverage:
 
 ## Frontend to Backend APIs
 
-# TODO
+### TODO
 
 ### Test Results
 
@@ -110,8 +110,6 @@ Test coverage:
 ## LLM Connector
 
 ### Test Results
-
-# TODO - get a screenshot of the tests running successfully
 
 There are two main aspects of the AI connector to test: Getting suggestions on cards to remove, and getting suggestions on cards to add.  
 
@@ -158,7 +156,7 @@ The following dataset is a sample of a list of cards that would be passed to the
     }
 
 
-## Test Validation
+### Test Validation
 
 Test validation for this method requires quantitative and qualitative analysis.  For the quantitative analysis, we need to validation that the AI returns the information in the required format.  An example can be seen [here](./media/prompt.txt).  The following test cases cover either the common cases or error cases expected from the LLM.
 
@@ -191,7 +189,7 @@ test the common and boundary cases for the class.  We can validate the correctne
 
 ## Authentication system
 
-# TODO
+### TODO
 
 
 ### Test Results
@@ -203,28 +201,33 @@ test the common and boundary cases for the class.  We can validate the correctne
 
 ## Frontend Navigation
 
+For frontend navigation we made use of exploratory testing.  Below is our exploratory testing charter
+
+| Test case                        | Explore                                          | using                                               | to                                                                   |   |
+|----------------------------------|--------------------------------------------------|-----------------------------------------------------|----------------------------------------------------------------------|---|
+| login                            | user login                                       | the auth0 login page                                | see if users can create/login to their accounts                      |   |
+| Get suggestions                  | user deck suggestions                            | the create deck page/get suggestions method         | see if users can input their deck to get suggestions                 |   |
+| accepted deck formats            | text recognitition for various deck list formats | the three different export methods used by moxfield | see if our website supports the most common deck formats             |   |
+| load existing deck               | fetching a saved deck from database              | a test account with a saved deck within             | see if registered users can access their saved decks                 |   |
+| input erroneous deck information | error catching                                   | the deck creation page                              | see if the website will catch user errors when inputting their decks |   |
+| commander search autofill        | autofill commander name                          | the find you commander feature                      | see if the website will autofill partially inputted commander names  |   |
+| mobile app support               | using the app on your phone                      | my phone                                            | see if the website works on the phone                                |   |
 ### Test Results
+
+Our exploratory testing managed to successfully complete all of the tasks listed in the above table
 
 ### Test Datasets
 
-For testing the website, a deck from Moxfield will be used as sample data, as this is the mostly likely source where users using our website will get their data from.  The deck used for testing can found [here](https://moxfield.com/decks/SE4kNjfWsUy3bgm61p3-vQ).  The sideboard data is ignored as that is not relevant to the testing.
+For testing the website, a deck from Moxfield was used as sample data, as this is the mostly likely source where users using our website will get their data from.  The deck used for testing can found [here](https://moxfield.com/decks/SE4kNjfWsUy3bgm61p3-vQ).  The sideboard data is ignored as that is not relevant to the testing.
 
 ### Test Validation
 
-We made use of selenium to perform various navigation and feature tests of the frontend.  The main aspects tested were:
+For our website, these are the main features that needed to be tested
+
 1. basic navigation
 2. login
 3. editing a deck
 4. getting suggestions
-5. applying suggestions
-6. Mobile navigation
+5. Mobile navigation
 
-for each, these are the tests the cover each one:
-1. TC-FR01-02
-2. TC-FR03
-3. TC-FR04-06, TC-FR10-12, 14
-4. TC-FR07, 13
-5. TC-FR08
-6. TC-FR09
-
-These tests are all designed with covering the possible ways the user will interact with the website.  Selenium mimics the actions a human user would take while they're on the website.  With that knowledge, if the Selenium tests are able to succeed, we can be confident that a user would be able to do the same, validating the functionality of the website.
+Our exploratory testing charter covers all of those aspects.  Since the test was done manually as a user, we can be confident that our website will work as expected with real end users as we performed all the actions they would perform.
