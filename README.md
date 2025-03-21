@@ -7,3 +7,5 @@ Documentation for the MysticTuner application.  Follow the following links to vi
 ### [RequirementsDocument](./Documentation/Requirements%20Documents/requirements.md)
 
 ### [TestDocument](./Documentation/Testing%20Documents/Testing.md)
+
+### [Generative AI Usage](./Documentation/Generative%20AI%20Usage/generative_AI.md)
