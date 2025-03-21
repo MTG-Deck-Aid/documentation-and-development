@@ -98,14 +98,131 @@ Test coverage:
 
 ## Frontend to Backend APIs
 
-### TODO
-
 ### Test Results
 
+<img src = "media\API_test_results.jpg" width = "720">
+
+The frontend to backend API's mainly consist of routes used to passed data from the user to the database and routes used to pass data from the user to scryfall as seen in the list of routes below
+<img src = "media\url_paths.jpg" width = "720">
+ 
 ### Test Datasets
+
+Card specific urls datasets:
+
+    data = {
+        "name": "Abrade"
+    }
+
+Card batch url datasets:
+
+    data = {
+        "names": ["Abrade", "Arcane Signet", "Invalid Card"]
+    }
+
+Add and remove datasets:
+
+    data = {
+        "num_to_add": 1,
+        "num_to_remove": 2,
+        "decklist": {
+            "commander": "Marchesha The Black Rose",
+            "mainboard": [
+            {
+                "name": "Ashnod's Al",
+                "quantity": 1
+            },
+            {
+                "name": "Demonic Tut",
+                "quantity": 1
+            },
+            {
+                "name": "Counterspell",
+                "quantity": 1
+            },
+            {
+                "name": "Sol Ring",
+                "quantity": 1
+            },
+            {
+                "name": "Swamp",
+                "quantity": 9
+            },
+            {
+                "name": "Island",
+                "quantity": 9
+            },
+            {
+                "name": "Mountain",
+                "quantity": 12
+            }
+            ]
+        }
+    }
+
+For all other API's involving database connection the data format is the same as mentioned above for card and deck queries
 
 ### Test Validation
 
+
+Verify Cards:
+    Aspects to be tested:
+        1 - test that verify cards works when passed a valid list of names
+        2 - test that verify cards returns correct response when there are invalid cards
+    Test Coverage:
+        1 - TC-AP01
+        2 - TC-AP02
+Get Image Links:
+    Aspects to be tested:
+        1 - Ensure that route successfully returns image links for requested card
+    Test Coverage:
+        1 - TC-AP03
+Get Commander:
+    Aspects to be tested:
+        1 - Ensure that route successfully returns data related to the provided commander
+    Test Coverage:
+        1 - TC-AP04
+Get Suggestions:
+    Aspects to be tested:
+        1 - Ensure that route successfully returns suggestioned create by gemini llm
+        2 - Ensure route still works when no changes are requested (edge case)
+    Test Coverage:
+        1 - TC-AP05
+        2 - TC-AP06
+Get autocomplete suggestions:
+    Aspects to be tested:
+        1 - Ensure that route successfully returns potential autocomplete options when searching for an actual card
+        2 - Ensure route successfully indicates when there are no potential autocomplete options
+    Test Coverage:
+        1 - TC-AP07
+        2 - TC-AP08
+Get decks:
+    Aspects to be tested:
+        1 - test that route returns successfully when retrieving an actual deck
+        2 - test that route returns properly when retrieving a non-existent deck
+    Test Coverage:
+        1 - TC-AP09
+        2 - TC-AP10
+Get user decks:
+    Aspects to be tested:
+        1 - test that route returns successfully when retrieving decks for a proper user
+        2 - test that route returns properly when retrieving decks for a non existent user
+    Test Coverage:
+        1 - TC-AP11
+        2 - TC-AP12
+Update Deck:
+    Aspects to be tested:
+        1 - Ensure that route returns properly after call and check that database is successfully updated
+    Test Coverage:
+        1 - TC-AP13
+Create Deck:
+    Aspects to be tested:
+        1 - Ensure that route returns properly after call and check that database is successfully updated
+    Test Coverage:
+        1 - TC-AP14
+
+## Additional Coverage within API testing
+
+Along with confirming that all routes are functioning as expected these test also ensure that user token authentication is behaving as expected within tests TC-AP09 -> TC-AP14
 
 ## LLM Connector
 
@@ -158,7 +275,7 @@ The following dataset is a sample of a list of cards that would be passed to the
 
 ### Test Validation
 
-Test validation for this method requires quantitative and qualitative analysis.  For the quantitative analysis, we need to validation that the AI returns the information in the required format.  An example can be seen [here](./media/prompt.txt).  The following test cases cover either the common cases or error cases expected from the LLM.
+Test validation for this method requires quantitative and qualitative analysis.  For the quantitative analysis, we need to validate that the AI returns the information in the required format.  An example can be seen [here](./media/prompt.txt).  The following test cases cover either the common cases or error cases expected from the LLM.
 
 Common cases:
 - TC-CS01, TC-CS02, TC-CS04, TC-CS05, TC-CS06
@@ -186,17 +303,6 @@ test datasets would include the full/partial names of magic the gathering cards.
 
 The ScryFallEngine class has one function to test.  Can it send and receive data from the ScryFall API.  Tests TC-SE01 and TC-SE02 
 test the common and boundary cases for the class.  We can validate the correctness of the reponse by whether the response of the API was what was intended be received.  In the example of an input of "Demonic" this is an incomplete card name for the full card name "Demonic Tutor".  If the API returns "Demonic Tutor" the test passes.
-
-## Authentication system
-
-### TODO
-
-
-### Test Results
-
-### Test Datasets
-
-### Test Validation
 
 
 ## Frontend Navigation
