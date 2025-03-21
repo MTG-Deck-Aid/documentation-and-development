@@ -13,7 +13,7 @@ Sachin Seizer, Brendan SMILEY, Luca Rios, Cody Casselman, Rohan Lange and Wade B
 - Use a generative AI to analyse the user inputted decks and get deck tuning suggestions
 - Communicate with ScryFall API to get magic card information
 - Website must be able to run on both mobile devices and desktops
-- users can login
+- users can login/sign in/logout
 - users can use the application as a guest 
 
 # Non Functional Requirements

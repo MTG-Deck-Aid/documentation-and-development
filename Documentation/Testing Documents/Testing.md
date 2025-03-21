@@ -11,7 +11,7 @@ For our application, the following systems are considered to be critical:
 - [User login Authenticaion](#authentication-system)
 - [Frontend-backend connection](#frontend-to-backend-apis)
 
-While not as critical, a test suite for frontend navigation was done as well to ensure user experience was smooth while using our application.
+While not as critical, a test suite for [frontend navigation](#frontend-navigation) was done as well to ensure user experience was smooth while using our application.
 
 # Test Results
 
@@ -164,10 +164,11 @@ Test validation for this method requires quantitative and qualitative analysis. 
 
 Common cases:
 - TC-CS01, TC-CS02, TC-CS04, TC-CS05, TC-CS06
+
 Error cases:
 - TC-CS03
 
-In terms of qualitative analysis, in regard to whether the quality of the suggestion is accurate, needs to be done manually.  After testing with various real life decks and comparing the suggestions of the LLM with reputable sources such as EDHRec and Moxfield, we can assert that the AI is giving accurate suggestions.
+In terms of qualitative analysis, in regard to whether the quality of the suggestion is accurate, needs to be done manually.  After testing with various real life decks and comparing the suggestions of the LLM with reputable sources such as EDHRec and Moxfield, we can assert that the AI is giving accurate suggestions.  Validating the quality of the results would be an ongoing process, as new cards are released, shifting the meta and changing which cards would consider valid suggestions by the LLM.
 
 ## Scryfall Connector
 
@@ -186,7 +187,7 @@ test datasets would include the full/partial names of magic the gathering cards.
 ### Test Validation
 
 The ScryFallEngine class has one function to test.  Can it send and receive data from the ScryFall API.  Tests TC-SE01 and TC-SE02 
-test the commmon and boundary cases for the class.  We can validate the correctness of the reponse by whether the response of the API was what was intended be received.  In the example of an input of "Demonic" this is an incomplete card name for the full card name "Demonic Tutor".  If the API returns "Demonic Tutor" the test passes.
+test the common and boundary cases for the class.  We can validate the correctness of the reponse by whether the response of the API was what was intended be received.  In the example of an input of "Demonic" this is an incomplete card name for the full card name "Demonic Tutor".  If the API returns "Demonic Tutor" the test passes.
 
 ## Authentication system
 
