@@ -173,67 +173,125 @@ For all other API's involving database connection the data format is the same as
 ### Test Validation
 
 
-Verify Cards:
-    Aspects to be tested:
-        1 - test that verify cards works when passed a valid list of names
-        2 - test that verify cards returns correct response when there are invalid cards
-        3 - Ensure that a deck can be validated in less than 5 seconds
-    Test Coverage:
-        1 - TC-AP01
-        2 - TC-AP02
-        3 - TC-AP15
-Get Image Links:
-    Aspects to be tested:
-        1 - Ensure that route successfully returns image links for requested card
-    Test Coverage:
-        1 - TC-AP03
-Get Commander:
-    Aspects to be tested:
-        1 - Ensure that route successfully returns data related to the provided commander
-    Test Coverage:
-        1 - TC-AP04
-Get Suggestions:
-    Aspects to be tested:
-        1 - Ensure that route successfully returns suggestioned create by gemini llm
-        2 - Ensure route still works when no changes are requested (edge case)
-    Test Coverage:
-        1 - TC-AP05
-        2 - TC-AP06
-Get autocomplete suggestions:
-    Aspects to be tested:
-        1 - Ensure that route successfully returns potential autocomplete options when searching for an actual card
-        2 - Ensure route successfully indicates when there are no potential autocomplete options
-    Test Coverage:
-        1 - TC-AP07
-        2 - TC-AP08
-Get decks:
-    Aspects to be tested:
-        1 - test that route returns successfully when retrieving an actual deck
-        2 - test that route returns properly when retrieving a non-existent deck
-    Test Coverage:
-        1 - TC-AP09
-        2 - TC-AP10
-Get user decks:
-    Aspects to be tested:
-        1 - test that route returns successfully when retrieving decks for a proper user
-        2 - test that route returns properly when retrieving decks for a non existent user
-    Test Coverage:
-        1 - TC-AP11
-        2 - TC-AP12
-Update Deck:
-    Aspects to be tested:
-        1 - Ensure that route returns properly after call and check that database is successfully updated
-    Test Coverage:
-        1 - TC-AP13
-Create Deck:
-    Aspects to be tested:
-        1 - Ensure that route returns properly after call and check that database is successfully updated
-    Test Coverage:
-        1 - TC-AP14
+#### Verify Cards:
+
+Aspects to be tested:
+
+    1 - test that verify cards works when passed a valid list of names
+
+    2 - test that verify cards returns correct response when there are invalid cards
+
+    3 - Ensure that a deck can be validated in less than 5 seconds
+
+Test Coverage:
+
+    1 - TC-AP01
+
+    2 - TC-AP02
+
+    3 - TC-AP15
+
+#### Get Image Links:
+
+Aspects to be tested:
+
+    1 - Ensure that route successfully returns image links for requested card
+
+Test Coverage:
+
+    1 - TC-AP03
+
+#### Get Commander:
+
+Aspects to be tested:
+
+    1 - Ensure that route successfully returns data related to the provided commander
+
+Test Coverage:
+
+    1 - TC-AP04
+
+#### Get Suggestions:
+
+Aspects to be tested:
+
+    1 - Ensure that route successfully returns suggestioned create by gemini llm
+
+    2 - Ensure route still works when no changes are requested (edge case)
+
+Test Coverage:
+
+    1 - TC-AP05
+
+    2 - TC-AP06
+
+#### Get autocomplete suggestions:
+
+Aspects to be tested:
+
+    1 - Ensure that route successfully returns potential autocomplete options when searching for an actual card
+
+    2 - Ensure route successfully indicates when there are no potential autocomplete options
+
+Test Coverage:
+
+    1 - TC-AP07
+
+    2 - TC-AP08
+
+#### Get decks:
+
+Aspects to be tested:
+
+    1 - test that route returns successfully when retrieving an actual deck
+
+    2 - test that route returns properly when retrieving a non-existent deck
+
+Test Coverage:
+
+    1 - TC-AP09
+
+    2 - TC-AP10
+
+#### Get user decks:
+
+Aspects to be tested:
+
+    1 - test that route returns successfully when retrieving decks for a proper user
+
+    2 - test that route returns properly when retrieving decks for a non existent user
+
+Test Coverage:
+
+    1 - TC-AP11
+
+    2 - TC-AP12
+
+#### Update Deck:
+
+Aspects to be tested:
+
+    1 - Ensure that route returns properly after call and check that database is successfully updated
+
+Test Coverage:
+
+    1 - TC-AP13
+
+#### Create Deck:
+
+Aspects to be tested:
+
+    1 - Ensure that route returns properly after call and check that database is successfully updated
+
+Test Coverage:
+
+    1 - TC-AP14
 
 ## Additional Coverage within API testing
 
-Along with confirming that all routes are functioning as expected these test also ensure that user token authentication is behaving as expected within tests TC-AP09 -> TC-AP14
+Along with confirming that all routes are functioning as expected these tests also ensure that user token authentication is behaving as expected within tests:
+
+TC-AP09 -> TC-AP14
 
 ## LLM Connector
 
@@ -287,7 +345,6 @@ The following dataset is a sample of a list of cards that would be passed to the
 
 ### Test Validation
 
-Test validation for this method requires quantitative and qualitative analysis. For the quantitative analysis, we need to validate that the AI returns the information in the required format. An example can be seen [here](./media/prompt.txt). The following test cases cover either the common cases or error cases expected from the LLM.
 Test validation for this method requires quantitative and qualitative analysis.  For the quantitative analysis, we need to validate that the AI returns the information in the required format.  An example can be seen [here](./media/prompt.txt).  The following test cases cover either the common cases or error cases expected from the LLM.
 
 Common cases:

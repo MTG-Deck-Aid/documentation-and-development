@@ -75,5 +75,5 @@ As a user I want the ability to import my decks from any of the common deck buil
 |   | REQ - 23       | The backend must be able to get 1-5 suggestions on cards to add to the deck from the Gemini API      | TC-CS02, TC-CS05    | Completed |
 |   | REQ - 24       | The backend must be able to get 1-5 suggestions on cards to remove from the deck from the Gemini API | TC-CS04             | Completed |
 |   | REQ - 25       | The User must be able to search for their commander and get real time autofill suggestions           | TC-AP07, TC-AP08    | Completed |
-|   | REQ - 26       | Frontend must be able to request and retrieve an authentication token from auth0                     |                     | Completed |
+|   | REQ - 26       | Frontend must be able to request and retrieve an authentication token from auth0                     | exploratory charter | Completed |
 |   | REQ - 27       | The backend must be able to validate authentication tokens sent back by the frontend                 | TC-AP09-14          | Completed |
