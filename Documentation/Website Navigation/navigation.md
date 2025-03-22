@@ -11,7 +11,6 @@ Main points
 1. You can click this button at any time to return to this home page
 2. You can click this button to head to the next page to input your deck data
 3. You can click this to login/sign in using our Auth0 authentication system
-4. There is an example deck that you can use to get familiar with the application. Click the deck list to move to the deck editing page.
 
 Click 2
 
