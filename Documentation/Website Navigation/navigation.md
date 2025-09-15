@@ -1,6 +1,6 @@
 # Introduction
 
-To access our website, head to [https://mystictuner.live/](https://mystictuner.live/)
+This website link has been take down as the project is now complete.
 
 From there, you'll be routed to our home page. It should look like this:
 
